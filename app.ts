@@ -2,6 +2,8 @@ import express from 'express';
 
 const app = express();
 
-app.listen(3000, () => {
-    console.log('aplicação rodando na porta 3000');
+const port = 3000;
+
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
 })
