@@ -2,7 +2,7 @@ import express from 'express';
 import clientsRouter from './routes/clients';
 
 const app = express();
-const port = 3000;
+const port = parseInt(`${process.env.PORT}`);
 
 app.use(clientsRouter);
 app.set('view engine','pug');
