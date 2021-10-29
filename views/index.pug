@@ -17,4 +17,9 @@ block conteudo
                     th(scope='row') #{client.id} 
                     td
                         a(href=`/clients/${client.id}`) #{client.name} 
-                    td #{client.email}    
+                    td #{client.email}  
+                    td
+                        a(href=`/clients/${client.id}/edit`).btn.btn-primary Editar
+                        form(action=`/clients/${client.id}?_method=DELETE` method='POST' style='display: inline')
+                            button(type='submit' value='submit' onclick='return confirm("Tem certeza que deseja apagar?")').btn.btn-danger Excluir
+    a(href="/clients/create").btn.btn-success Novo Cliente                  
